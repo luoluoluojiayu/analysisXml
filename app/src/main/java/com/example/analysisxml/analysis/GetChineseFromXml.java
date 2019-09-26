@@ -7,9 +7,9 @@ import org.dom4j.io.SAXReader;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.example.analysisxml.analysis.pathUtil.basePath;
-import static com.example.analysisxml.analysis.pathUtil.modulePath;
-import static com.example.analysisxml.analysis.pathUtil.resultFilePath;
+import static com.example.analysisxml.util.pathUtil.basePath;
+import static com.example.analysisxml.util.pathUtil.modulePath;
+import static com.example.analysisxml.util.pathUtil.resultFilePath;
 import static com.example.analysisxml.util.ChineseUtil.isChinese;
 import static com.example.analysisxml.util.ExcelUtil.writeExcelByList;
 
@@ -103,7 +103,6 @@ public class GetChineseFromXml {
         for (int i = 0; i < list.size(); i++) {
             Element element = list.get(i);
             if (isChinese(element.getText())) {
-//                data.add(element.getText());
                 data.add("<string name="+element.attributeValue("name")+">"+element.getText()+"<string>");
 //                System.out.println("在文件："+filePath+"找到中文字符串："+element.getText());
                 isChinese++;

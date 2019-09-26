@@ -5,8 +5,7 @@ import com.example.analysisxml.util.ExcelUtil;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.example.analysisxml.analysis.pathUtil.beCompareFilePath;
-import static com.example.analysisxml.analysis.pathUtil.resultFilePath;
+import static com.example.analysisxml.util.pathUtil.resultFilePath;
 
 /**
  * 跟苹果数据源做对比

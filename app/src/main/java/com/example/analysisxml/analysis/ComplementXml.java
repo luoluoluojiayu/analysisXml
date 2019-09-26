@@ -13,8 +13,8 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Set;
 
-import static com.example.analysisxml.analysis.pathUtil.basePath;
-import static com.example.analysisxml.analysis.pathUtil.modulePath;
+import static com.example.analysisxml.util.pathUtil.basePath;
+import static com.example.analysisxml.util.pathUtil.modulePath;
 import static com.example.analysisxml.util.XmlUtil.saveXml;
 
 /**
