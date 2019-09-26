@@ -14,8 +14,8 @@ import static com.example.analysisxml.analysis.pathUtil.resultFilePath;
 public class CompareWithIos {
     public static void main(String[] args) throws Exception {
         //对比两个list
-        List<String> result = compareTwoList(ExcelUtil.readExcelByOneColumn(beCompareFilePath, 0),
-                ExcelUtil.readExcelByOneColumn(beCompareFilePath, 1));
+        List<String> result = compareTwoList(ExcelUtil.readExcelByOneColumn(resultFilePath, 0),
+                ExcelUtil.readExcelByOneColumn(resultFilePath, 1));
         //导入结果到excel
         ExcelUtil.writeExcelByList(result, resultFilePath);
     }

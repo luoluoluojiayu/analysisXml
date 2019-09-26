@@ -27,7 +27,7 @@ public class GetChineseFromXml {
         //存放所有中文数据的集合
         ArrayList<String> allData = new ArrayList<>();
         for (int i = 0; i < filePath.size(); i++) {
-            allData.addAll(analysis(filePath.get(i)));
+            allData.addAll(analysis(filePath.get(i),getNoNeedString()));
 //            allData.addAll(analysisWithStringTag(filePath.get(i)));
         }
 
@@ -47,6 +47,13 @@ public class GetChineseFromXml {
         writeExcelByList(data, resultFilePath);
     }
 
+    public static List<String> getNoNeedString(){
+        List<String> data=new ArrayList<>();
+        data.add("简体中文");
+        data.add("繁體中文");
+        return data;
+    }
+
     /**
      * 解析xml文件，获取其中的中文数据
      *
@@ -54,7 +61,7 @@ public class GetChineseFromXml {
      * @return
      * @throws Exception
      */
-    private static ArrayList<String> analysis(String filePath) throws Exception {
+    private static ArrayList<String> analysis(String filePath,List<String> noNeedString) throws Exception {
         SAXReader saxReader = new SAXReader();
         Document document = saxReader.read(filePath);
         //得到根节点
@@ -66,7 +73,7 @@ public class GetChineseFromXml {
         ArrayList<String> data = new ArrayList<>();
         for (int i = 0; i < list.size(); i++) {
             Element element = list.get(i);
-            if (isChinese(element.getText())) {
+            if (isChinese(element.getText())&&!noNeedString.contains(element.getText())) {
                 data.add(element.getText());
                 isChinese++;
                 System.out.println("在文件："+filePath+"找到中文字符串："+element.getText());
