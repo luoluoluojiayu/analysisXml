@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <!--module 上面带有needComplement属性，并且值为true的，代表这个module需要自动补全-->
+
+    <!--child上面带有getChinese属性，并且值为true的，代表这个child可以被自动获取中文-->
+
+    <!--child上面带有needTranslate属性，代表这个child可以被自动替换翻译，只要翻译文件里面
+        有这个类型的语言，也就是有某一列第一个数据就是该属性值，就代表是同意各种语言-->
+
+    <!--chat-->
+    <module name="workspace\apps\chat\src\main\res\values\strings.xml"  needComplement="true">
+        <child name="workspace\apps\chat\src\main\res\values-en-rUS\strings.xml" needTranslate="英语" getChinese="true"/>
+        <child name="workspace\apps\chat\src\main\res\values-km-rKH\strings.xml" needTranslate="柬埔寨语" />
+        <child name="workspace\apps\chat\src\main\res\values-th-rTH\strings.xml" needTranslate="泰语"/>
+        <child name="workspace\apps\chat\src\main\res\values-zh-rTW\strings.xml" needTranslate="台语"/>
+    </module>
+
+    <!--exchange-->
+    <module name="workspace\components\exchange\impl\src\main\res\values\strings.xml"  needComplement="true">
+        <child name="workspace\components\exchange\impl\src\main\res\values-en-rUS\strings.xml" needTranslate="英语" getChinese="true"/>
+        <child name="workspace\components\exchange\impl\src\main\res\values-km-rKH\strings.xml" needTranslate="柬埔寨语" />
+        <child name="workspace\components\exchange\impl\src\main\res\values-th-rTH\strings.xml" needTranslate="泰语"/>
+        <child name="workspace\components\exchange\impl\src\main\res\values-zh-rTW\strings.xml" needTranslate="台语"/>
+    </module>
+
+    <!--bank-card-->
+    <module name="workspace\components\bank-card\impl\src\main\res\values\strings.xml" needComplement="true">
+        <child name="workspace\components\bank-card\impl\src\main\res\values-en-rUS\strings.xml" needTranslate="英语" getChinese="true"/>
+        <child name="workspace\components\bank-card\impl\src\main\res\values-km-rKH\strings.xml" needTranslate="柬埔寨语" />
+        <child name="workspace\components\bank-card\impl\src\main\res\values-th-rTH\strings.xml" needTranslate="泰语"/>
+        <child name="workspace\components\bank-card\impl\src\main\res\values-zh-rTW\strings.xml" needTranslate="台语"/>
+    </module>
+
+    <!--lib_base-->
+    <module name="workspace\libs\lib_base\src\main\res\values\strings.xml" needComplement="true">
+        <child name="workspace\libs\lib_base\src\main\res\values-en-rUS\strings.xml" needTranslate="英语" getChinese="true"/>
+        <child name="workspace\libs\lib_base\src\main\res\values-km-rKH\strings.xml" needTranslate="柬埔寨语" />
+        <child name="workspace\libs\lib_base\src\main\res\values-th-rTH\strings.xml" needTranslate="泰语"/>
+        <child name="workspace\libs\lib_base\src\main\res\values-zh-rTW\strings.xml" needTranslate="台语"/>
+    </module>
+
+    <!--lib_camera-->
+    <module name="workspace\libs\lib_camera\src\main\res\values\strings.xml" needComplement="false">
+        <child name="workspace\libs\lib_camera\src\main\res\values-en-rUS\strings.xml" needTranslate="英语" getChinese="true"/>
+        <child name="workspace\libs\lib_camera\src\main\res\values-km-rKH\strings.xml" needTranslate="柬埔寨语" />
+        <child name="workspace\libs\lib_camera\src\main\res\values-th-rTH\strings.xml" needTranslate="泰语"/>
+        <child name="workspace\libs\lib_camera\src\main\res\values-zh-rTW\strings.xml" needTranslate="台语"/>
+    </module>
+
+    <!--lib_map-->
+    <module name="workspace\libs\lib_map\src\main\res\values\strings.xml" needComplement="false">
+        <child name="workspace\libs\lib_map\src\main\res\values-en-rUS\strings.xml" needTranslate="英语" getChinese="true"/>
+        <child name="workspace\libs\lib_map\src\main\res\values-km-rKH\strings.xml" needTranslate="柬埔寨语" />
+        <child name="workspace\libs\lib_map\src\main\res\values-th-rTH\strings.xml" needTranslate="泰语"/>
+        <child name="workspace\libs\lib_map\src\main\res\values-zh-rTW\strings.xml" needTranslate="台语"/>
+    </module>
+
+    <!--lib_nim-->
+    <module name="workspace\libs\lib_nim\src\main\res\values\strings.xml" needComplement="false">
+        <child name="workspace\libs\lib_nim\src\main\res\values-en-rUS\strings.xml" needTranslate="英语" getChinese="true"/>
+        <child name="workspace\libs\lib_nim\src\main\res\values-km-rKH\strings.xml" needTranslate="柬埔寨语" />
+        <child name="workspace\libs\lib_nim\src\main\res\values-th-rTH\strings.xml" needTranslate="泰语"/>
+        <child name="workspace\libs\lib_nim\src\main\res\values-zh-rTW\strings.xml" needTranslate="台语"/>
+    </module>
+
+</resources>
