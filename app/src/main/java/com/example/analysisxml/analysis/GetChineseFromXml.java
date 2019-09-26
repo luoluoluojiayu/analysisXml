@@ -69,6 +69,7 @@ public class GetChineseFromXml {
             if (isChinese(element.getText())) {
                 data.add(element.getText());
                 isChinese++;
+                System.out.println("在文件："+filePath+"找到中文字符串："+element.getText());
             }
         }
         System.out.println("总共读取到" + isChinese + "条中文数据");
@@ -97,6 +98,7 @@ public class GetChineseFromXml {
             if (isChinese(element.getText())) {
 //                data.add(element.getText());
                 data.add("<string name="+element.attributeValue("name")+">"+element.getText()+"<string>");
+//                System.out.println("在文件："+filePath+"找到中文字符串："+element.getText());
                 isChinese++;
             }
         }

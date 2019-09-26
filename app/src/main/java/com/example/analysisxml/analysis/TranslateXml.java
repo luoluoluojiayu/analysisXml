@@ -69,7 +69,9 @@ public class TranslateXml {
                                 //遍历该xml文件中所有字段，若有跟上面那个中文字段一样的数据，那么用对应位置的外国语言代替
                                 for (int elementIndex = 0; elementIndex < childContents.size(); elementIndex++) {
                                     if (childContents.get(elementIndex).getText().equals(translateString)) {
-                                        childContents.get(elementIndex).setText(translateContents.get(index));
+                                        if(translateContents.get(index)!=null&&!translateContents.get(index).equals("")){
+                                            childContents.get(elementIndex).setText(translateContents.get(index));
+                                        }
                                     }
                                 }
                             }
