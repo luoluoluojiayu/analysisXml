@@ -28,7 +28,7 @@
         <child name="workspace\components\bank-card\impl\src\main\res\values-en-rUS\strings.xml" needTranslate="英语" getChinese="true"/>
         <child name="workspace\components\bank-card\impl\src\main\res\values-km-rKH\strings.xml" needTranslate="柬埔寨语" getChinese="true"/>
         <child name="workspace\components\bank-card\impl\src\main\res\values-th-rTH\strings.xml" needTranslate="泰语" getChinese="true"/>
-        <child name="workspace\components\bank-card\impl\src\main\res\values-zh-rTW\strings.xml" />
+        <child name="workspace\components\bank-card\impl\src\main\res\values-zh-rTW\strings.xml" needTranslate="台语"/>
     </module>
 
     <!--lib_base-->
