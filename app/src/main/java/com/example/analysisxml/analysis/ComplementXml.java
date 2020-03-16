@@ -100,6 +100,7 @@ public class ComplementXml {
                 Attribute attribute = DocumentHelper.createAttribute(e, "name", key);
                 e.add(attribute);
                 if (childElementsHashList.get(j).get(key) == null) {
+                    System.out.println("找不到的key："+key);
                     //假如子xml没有这个数据了，那么用子xml的值
                     e.setText(parentHashMap.get(key));
                     childElementsList.get(j).add(i , e);

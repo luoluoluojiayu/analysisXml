@@ -9,10 +9,10 @@ import org.dom4j.io.SAXReader;
 import java.util.HashMap;
 import java.util.List;
 
+import static com.example.analysisxml.util.XmlUtil.saveXml;
 import static com.example.analysisxml.util.pathUtil.basePath;
 import static com.example.analysisxml.util.pathUtil.modulePath;
 import static com.example.analysisxml.util.pathUtil.translateDataFilePath;
-import static com.example.analysisxml.util.XmlUtil.saveXml;
 
 
 /**
@@ -21,6 +21,7 @@ import static com.example.analysisxml.util.XmlUtil.saveXml;
 public class TranslateXml {
     public static void main(String[] args) {
         //获取存放翻译数据的excel中的翻译数据
+        //翻译文件中，有几列语言，就读几列，这里默认写的是5列，中文，英语，缅甸语，泰语，台语
         HashMap<String, List<String>> translateData = ExcelUtil.readExcel(translateDataFilePath, 5);
         translate(modulePath, basePath, translateData);
     }
@@ -69,7 +70,7 @@ public class TranslateXml {
                                 //遍历该xml文件中所有字段，若有跟上面那个中文字段一样的数据，那么用对应位置的外国语言代替
                                 for (int elementIndex = 0; elementIndex < childContents.size(); elementIndex++) {
                                     if (childContents.get(elementIndex).getText().equals(translateString)) {
-                                        if(translateContents.get(index)!=null&&!translateContents.get(index).equals("")){
+                                        if (translateContents.get(index) != null && !translateContents.get(index).equals("")) {
                                             childContents.get(elementIndex).setText(translateContents.get(index));
                                         }
                                     }
