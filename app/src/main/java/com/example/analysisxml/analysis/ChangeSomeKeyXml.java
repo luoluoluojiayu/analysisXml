@@ -1,22 +1,18 @@
 package com.example.analysisxml.analysis;
 
-import com.example.analysisxml.util.ExcelUtil;
-
 import org.dom4j.Document;
 import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
 
-import java.util.HashMap;
 import java.util.List;
 
 import static com.example.analysisxml.util.XmlUtil.saveXml;
 import static com.example.analysisxml.util.pathUtil.basePath;
 import static com.example.analysisxml.util.pathUtil.modulePath;
-import static com.example.analysisxml.util.pathUtil.translateDataFilePath;
 
 
 /**
- * 自动给xml文件替换翻译
+ * 给指定的string item 全部替换成指定的值
  */
 public class ChangeSomeKeyXml {
     public static void main(String[] args) {

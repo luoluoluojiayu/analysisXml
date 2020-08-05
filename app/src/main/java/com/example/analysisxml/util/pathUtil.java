@@ -2,7 +2,8 @@ package com.example.analysisxml.util;
 
 public class pathUtil {
     //项目地址
-    public static String basePath = "F:\\im-yunxin\\";
+//    public static String basePath = "F:\\im-yunxin\\";
+    public static String basePath = "F:\\AndroidProject\\im-yunxin2.4\\im-yunxin\\";
     //这个项目module.xml的地址
     public static String modulePath = "F:\\AndroidProject\\analysisXml\\app\\src\\main\\java\\com\\example\\analysisxml\\moduleSetting\\module.xml";
     //翻译excel存放地址

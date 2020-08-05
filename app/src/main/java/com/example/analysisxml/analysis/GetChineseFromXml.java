@@ -61,7 +61,7 @@ public class GetChineseFromXml {
      * @return
      * @throws Exception
      */
-    private static ArrayList<String> analysis(String filePath,List<String> noNeedString) throws Exception {
+    public static ArrayList<String> analysis(String filePath,List<String> noNeedString) throws Exception {
         SAXReader saxReader = new SAXReader();
         Document document = saxReader.read(filePath);
         //得到根节点

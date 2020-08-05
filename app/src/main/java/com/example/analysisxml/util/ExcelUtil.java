@@ -75,7 +75,7 @@ public class ExcelUtil {
      */
     public static void writeExcelByList(List<String> data, String savePath) {
         //开始写入excel,创建模型文件头
-        String[] titleA = {"中文string"};
+        String[] titleA = {"中文"};
         //创建Excel文件，B库CD表文件
         File fileA = new File(savePath);
         if (fileA.exists()) {

@@ -21,7 +21,7 @@ import static com.example.analysisxml.util.pathUtil.translateDataFilePath;
 public class TranslateXml {
     public static void main(String[] args) {
         //获取存放翻译数据的excel中的翻译数据
-        //翻译文件中，有几列语言，就读几列，这里默认写的是5列，中文，英语，缅甸语，泰语，台语
+        //翻译文件中，有几列语言，就读几列，这里默认写的是5列，中文，英语，柬埔寨语，泰语，台语
         HashMap<String, List<String>> translateData = ExcelUtil.readExcel(translateDataFilePath, 5);
         translate(modulePath, basePath, translateData);
     }
